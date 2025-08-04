@@ -1,6 +1,6 @@
 package com.gildedrose.components;
 
-import com.gildedrose.Item;
+import com.gildedrose.domain.Item;
 import com.gildedrose.strategy.ItemUpdateStrategy;
 import com.gildedrose.strategy.ItemUpdateStrategyFactory;
 

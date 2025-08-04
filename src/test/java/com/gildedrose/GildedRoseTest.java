@@ -1,5 +1,6 @@
 package com.gildedrose;
 
+import com.gildedrose.domain.Item;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -15,8 +16,8 @@ class GildedRoseTest {
         GildedRose app = new GildedRose(items);
         app.updateQuality();
 
-        assertEquals(1, items[0].quality); // aged brie
-        assertEquals(47, items[1].quality); // backstage
-        assertEquals(5, items[2].quality);  // default
+        assertEquals(1, items[0].quality()); // aged brie
+        assertEquals(47, items[1].quality()); // backstage
+        assertEquals(5, items[2].quality());  // default
     }
 }

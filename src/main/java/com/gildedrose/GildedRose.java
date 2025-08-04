@@ -1,7 +1,10 @@
 package com.gildedrose;
 
 import com.gildedrose.components.ItemUpdater;
+import com.gildedrose.domain.Item;
+import lombok.Getter;
 
+@Getter
 public class GildedRose {
     private final Item[] items;
     private final ItemUpdater updater = new ItemUpdater();
@@ -14,9 +17,5 @@ public class GildedRose {
         for (Item item : items) {
             updater.update(item);
         }
-    }
-
-    public Item[] getItems() {
-        return items;
     }
 }
