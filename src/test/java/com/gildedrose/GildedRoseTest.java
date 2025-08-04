@@ -1,6 +1,8 @@
 package com.gildedrose;
 
 import com.gildedrose.domain.Item;
+import com.gildedrose.strategy.ItemUpdateStrategyRegistry;
+import com.gildedrose.strategy.StrategyConfiguration;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -13,7 +15,9 @@ class GildedRoseTest {
             new Item("Backstage passes to a TAFKAL80ETC concert", 10, 45),
             new Item("foo", 3, 6)
         };
-        GildedRose app = new GildedRose(items);
+
+        ItemUpdateStrategyRegistry registry = StrategyConfiguration.configure();
+        GildedRose app = new GildedRose(items, registry);
         app.updateQuality();
 
         assertEquals(1, items[0].quality()); // aged brie
